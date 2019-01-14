@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PresetsFragment">
+
+    <!-- HEADER -->
+    <LinearLayout
+        android:id="@+id/preset_list_fragment_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/preset_list_fragment_header_nomPreset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textColor="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:textSize="@dimen/default_title_size"
+            android:layout_margin="@dimen/default_margin"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/preset_recyclerView"
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="64dp" />
+    <RelativeLayout
+        android:id="@+id/todo_list_activity_relative_layout_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_margin"
+        android:layout_above="@id/buttonAddInstrument">
+
+        <!-- EDIT TEXT  -->
+        <EditText
+            android:id="@+id/todo_list_activity_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/default_text_size"
+            android:hint="@string/instruments_ajouter"
+            android:layout_toLeftOf="@id/todo_list_activity_spinner"/>
+
+        <!-- SPINNER  -->
+        <Spinner
+            android:id="@+id/todo_list_activity_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="@dimen/default_text_size"/>
+        </RelativeLayout>
+
+    <!-- BUTTON TODOLIST -->
+    <Button
+        android:id="@+id/buttonAddInstrument"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/instrument_button_add"
+        android:textColor="#fff"
+        android:textSize="@dimen/default_text_size"
+        android:background="@drawable/button_radius_accent_color"
+        style="?android:attr/borderlessButtonStyle"
+        android:layout_margin="@dimen/default_margin"
+        android:padding="@dimen/default_margin"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>
