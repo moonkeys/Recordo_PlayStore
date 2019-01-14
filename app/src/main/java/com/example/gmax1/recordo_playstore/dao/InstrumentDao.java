@@ -6,7 +6,6 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 import android.database.Cursor;
-
 import com.example.gmax1.recordo_playstore.models.Instrument;
 
 import java.util.List;

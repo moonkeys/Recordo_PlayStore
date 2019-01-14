@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.example.gmax1.recordo_playstore.fragment.BaseActivity;
 import com.example.gmax1.recordo_playstore.fragment.PresetsFragment;
 import com.example.gmax1.recordo_playstore.fragment.RecordingFragment;
-import com.example.gmax1.recordo_playstore.fragment.SettingsFragment;
 import com.example.gmax1.recordo_playstore.fragment.SonometreFragment;
 
 import butterknife.BindView;
