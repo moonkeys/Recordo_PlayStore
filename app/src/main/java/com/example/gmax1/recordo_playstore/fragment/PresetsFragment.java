@@ -35,8 +35,8 @@ public class PresetsFragment extends BaseActivity implements InstrumentAdapter.L
 
     // FOR DESIGN
     @BindView(R.id.preset_recyclerView) RecyclerView recyclerView; // 1 - Declare RecyclerView
-    @BindView(R.id.todo_list_activity_spinner) Spinner spinner;
-    @BindView(R.id.todo_list_activity_edit_text) EditText editText;
+    @BindView(R.id.preset_list_activity_spinner) Spinner spinner;
+    @BindView(R.id.preset_list_activity_edit_text) EditText editText;
     @BindView(R.id.preset_list_fragment_header_nomPreset) TextView profileText;
 
     //FOR DATA

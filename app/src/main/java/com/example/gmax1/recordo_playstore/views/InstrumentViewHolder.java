@@ -17,7 +17,8 @@ public class InstrumentViewHolder extends RecyclerView.ViewHolder implements Vie
 
     @BindView(R.id.nomInstrument) TextView nomInstrumentTestView;
     @BindView(R.id.nbdB) TextView nbdBTestView;
-    @BindView(R.id.presets_record) ImageButton imageButton;
+    @BindView(R.id.presets_record) ImageButton imageButtonRecord;
+    @BindView(R.id.instrument_remove) ImageButton imageButtonRemove;
 
     // FOR DATA
     private WeakReference<InstrumentAdapter.Listener> callbackWeakRef;
@@ -31,7 +32,7 @@ public class InstrumentViewHolder extends RecyclerView.ViewHolder implements Vie
         this.callbackWeakRef = new WeakReference<InstrumentAdapter.Listener>(callback);
         this.nomInstrumentTestView.setText(instrument.getNomInstrument());
         this.nbdBTestView.setText(Float.toString(instrument.getNbdB()));
-        this.imageButton.setOnClickListener(this); //Bouton enregistrer instument
+        this.imageButtonRemove.setOnClickListener(this); //Bouton enregistrer instument
     }
 
 

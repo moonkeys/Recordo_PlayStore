@@ -17,6 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_margin="@dimen/default_margin"
+        android:textSize="@dimen/list_text_size"
         android:text="@string/nomInstrument" />
 
     <TextView
@@ -25,6 +26,8 @@
         android:layout_height="wrap_content"
         android:layout_weight="125"
         android:layout_margin="@dimen/default_margin"
+        android:textAlignment="center"
+        android:textSize="@dimen/list_text_size"
         android:text="@string/nbdB" />
 
     <ImageButton
