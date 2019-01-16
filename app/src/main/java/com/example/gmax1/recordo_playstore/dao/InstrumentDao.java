@@ -27,11 +27,4 @@ public interface InstrumentDao {
 
     @Query("DELETE FROM Instrument WHERE id = :instrumentId")
     int deleteInstrument(long instrumentId);
-
-    /*@Insert(onConflict = OnConflictStrategy.REPLACE)
-    void createInstrument(Instrument instrument);
-
-    @Query("SELECT * FROM Instrument WHERE nomInstruments = :instrument")
-    LiveData<Instrument> getInstrument(long instrument);*/
-
 }

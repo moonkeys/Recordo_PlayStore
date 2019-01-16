@@ -35,7 +35,7 @@ public class PresetsFragment extends BaseActivity implements InstrumentAdapter.L
 
     // FOR DESIGN
     @BindView(R.id.preset_recyclerView) RecyclerView recyclerView; // 1 - Declare RecyclerView
-    @BindView(R.id.preset_list_activity_spinner) Spinner spinner;
+    //@BindView(R.id.preset_list_activity_spinner) Spinner spinner;
     @BindView(R.id.preset_list_activity_edit_text) EditText editText;
     @BindView(R.id.preset_list_fragment_header_nomPreset) TextView profileText;
 
@@ -108,14 +108,14 @@ public class PresetsFragment extends BaseActivity implements InstrumentAdapter.L
 
     // ---
 
-    // Get Current User
+    // Get Current Preset
     private void getCurrentPreset(int presetId){
         this.instrumentViewModel.getPreset(presetId).observe(this, this::updateHeader);
     }
 
     // ---
 
-    // 3 - Get all items for a user
+    // 3 - Get all items for a preset
     private void getInstruments(int presetId){
         this.instrumentViewModel.getInstruments(presetId).observe(this, this::updateInstrumentsList);
     }
@@ -124,7 +124,7 @@ public class PresetsFragment extends BaseActivity implements InstrumentAdapter.L
     private void createInstrument(){
         Instrument instrument = new Instrument(
                 this.editText.getText().toString(),
-                this.spinner.getSelectedItemPosition(),
+               0,
                 PRESET_ID);
         this.editText.setText("");
         this.instrumentViewModel.createInstrument(instrument);
@@ -153,7 +153,7 @@ public class PresetsFragment extends BaseActivity implements InstrumentAdapter.L
         this.recyclerView.setAdapter(this.adapter);
         this.recyclerView.setLayoutManager(new LinearLayoutManager(this));
         ItemClickSupport.addTo(recyclerView, R.layout.presets)
-                .setOnItemClickListener((recyclerView1, position, v) -> this.updateInstrument(this.adapter.getInstrument(position)));
+                .setOnItemClickListener((recyclerView, position, v) -> this.updateInstrument(this.adapter.getInstrument(position)));
     }
 
     // Update header (username & picture)

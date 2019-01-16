@@ -50,7 +50,7 @@ public abstract class SaveMyPresetsDatabase extends RoomDatabase {
 
                 ContentValues contentValues = new ContentValues();
                 contentValues.put("id", 1);
-                contentValues.put("nomPreset", "Test");
+                contentValues.put("nomPreset", "Preset");
 
                 db.insert("Preset", OnConflictStrategy.IGNORE, contentValues);
             }

@@ -9,6 +9,7 @@ public class ItemClickSupport {
     private OnItemLongClickListener mOnItemLongClickListener;
     private int mItemID;
     private View.OnClickListener mOnClickListener = new View.OnClickListener() {
+
         @Override
         public void onClick(View v) {
             if (mOnItemClickListener != null) {
@@ -84,7 +85,6 @@ public class ItemClickSupport {
     }
 
     public interface OnItemClickListener {
-
         void onItemClicked(RecyclerView recyclerView, int position, View v);
     }
 

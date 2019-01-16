@@ -42,10 +42,10 @@ public class Instrument {
     // --- UTILS ---
     public static Instrument fromContentValues(ContentValues values) {
         final Instrument instrument = new Instrument();
-        if (values.containsKey("text")) instrument.setNomInstrument(values.getAsString("nomInstrument"));
-        if (values.containsKey("category")) instrument.setNbdB(values.getAsInteger("0"));
+        if (values.containsKey("nomInstrument")) instrument.setNomInstrument(values.getAsString("nomInstrument"));
+        if (values.containsKey("nbdB")) instrument.setNbdB(values.getAsInteger("0"));
         if (values.containsKey("isSelected")) instrument.setSelected(values.getAsBoolean("isSelected"));
-        if (values.containsKey("userId")) instrument.setPresetId(values.getAsLong("presetId"));
+        if (values.containsKey("presetId")) instrument.setPresetId(values.getAsLong("presetId"));
         return instrument;
     }
 }

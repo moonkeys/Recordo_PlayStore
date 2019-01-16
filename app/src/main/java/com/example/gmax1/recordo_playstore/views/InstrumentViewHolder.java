@@ -32,7 +32,7 @@ public class InstrumentViewHolder extends RecyclerView.ViewHolder implements Vie
         this.callbackWeakRef = new WeakReference<InstrumentAdapter.Listener>(callback);
         this.nomInstrumentTestView.setText(instrument.getNomInstrument());
         this.nbdBTestView.setText(Float.toString(instrument.getNbdB()));
-        this.imageButtonRemove.setOnClickListener(this); //Bouton enregistrer instument
+        this.imageButtonRemove.setOnClickListener(this); //Bouton enregistrer instrument
     }
 
 
